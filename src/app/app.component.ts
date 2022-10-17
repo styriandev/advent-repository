@@ -16,7 +16,6 @@ interface State {
   providers: [ RxState ]
 })
 export class AppComponent {
-  title = 'my-advent';
   recipeIndex$: Observable<number>;
   recipes$: Observable<Recipe[]>;
   recipe$: Observable<Recipe>;
