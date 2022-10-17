@@ -50,4 +50,13 @@ export class AppComponent {
   previous(): void {
     this._state.set('index', ({index}) => index - 1);
   }
+
+  copy() {
+    this._state.set('recipes', ({recipes}) => {
+      const newRecipes = [...recipes, ...recipes];
+      recipes.push(...newRecipes);
+      return recipes;
+      }
+    );
+  }
 }
