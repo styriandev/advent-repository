@@ -1,0 +1,33 @@
+.calendar {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin: 20px;
+
+  .calendar-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    width: 200px;
+    border-radius: 8px;
+    background-color: rgba(227, 67, 67, 0.7);
+    //&:hover {
+    //  border: 1px solid rgba(227, 67, 67);
+    //}
+
+    &.openable {
+      cursor: pointer;
+    }
+
+    &.opened {
+      display: block;
+      background-color: white;
+      cursor: pointer;
+    }
+
+    &.hoverable:hover {
+      border: 1px solid rgba(227, 67, 67);;
+    }
+  }
+}

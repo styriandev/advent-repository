@@ -1,0 +1,16 @@
+<ng-container *ngIf="entry">
+  <div class="date" *ngIf="!entry.isOpened; else opened">
+    {{ entry.date | date:'dd'}}
+  </div>
+
+  <ng-template #opened>
+    <div class="opened-item" [class.video]="entry.videoUrl">
+      <img class="display-image" *ngIf="entry.imageUrl" [src]="'assets/' + entry.imageUrl" />
+      <div class="display-video" *ngIf="entry.videoUrl">
+        <app-video-player [videoUrl]="entry.videoUrl" [videoHeight]="150" [videoWidth]="200"></app-video-player>
+      </div>
+
+      <div class="text">{{entry.text}}</div>
+    </div>
+  </ng-template>
+</ng-container>

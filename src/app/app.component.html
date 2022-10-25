@@ -1,8 +1,1 @@
-<button (click)="previous()" [disabled]="!(hasPrevious$ | async)">Previous</button>
-<button (click)="next()" [disabled]="!(hasNext$ | async)">Next</button>
-<button (click)="copy()">Double the food</button>
-
-
-<div *ngIf="recipe$ | async as recipe" [ngClass]="recipe.name === 'Schnitzel' ? 'good' : 'bad'">
-  {{ recipe.name}}
-</div>
+<app-advent-calendar></app-advent-calendar>

@@ -1,0 +1,10 @@
+<div class="calendar">
+  <div class="calendar-item" *ngFor="let entry of entries"
+       [class.hoverable]="!entry.isOpened"
+       [class.opened]="entry.isOpened"
+       [class.openable]="entry | canBeOpened"
+       (click)="openDialog(entry)"
+  >
+    <app-entry [entry]="entry"></app-entry>
+  </div>
+</div>

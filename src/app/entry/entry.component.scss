@@ -1,0 +1,40 @@
+.date {
+  font-size: 3em;
+  font-family: Bevan,serif;
+  color: white;
+}
+
+.opened-item {
+  //display: flex;
+  height: 100%;
+  width: 100%;
+
+  .display-image {
+    width: 200px;
+    border-radius: 8px 8px 0 0;
+  }
+
+  &.video {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .display-video {
+    width: fit-content;
+
+  }
+}
+
+
+
+.text {
+  padding-left: 10px;
+  padding-top: 5px;
+  height: 30px;
+  background-color: white;
+  position: relative;
+  bottom: 0;
+  left: 0;
+}
