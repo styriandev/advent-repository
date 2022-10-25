@@ -11,8 +11,8 @@ export class EntryService {
     return [
       new Entry(new Date(2022, 12, 1), 'Test', undefined, 'image1.jpg'),
       new Entry(new Date(2022, 12, 2), 'Test', 'https://www.youtube.com/watch?v=CcQYj4V2IKw&ab_channel=Marmicode'),
-      new Entry(new Date(2022, 12, 3), 'Test'),
-      new Entry(new Date(2022, 12, 4), 'Test'),
+      new Entry(new Date(2022, 12, 3), 'Test', undefined, undefined, 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'),
+      new Entry(new Date(2022, 12, 4), 'Test', undefined, 'image1.jpg', 'So ein schönes Bild'),
       new Entry(new Date(2022, 12, 5), 'Test'),
       new Entry(new Date(2022, 12, 6), 'Test'),
       new Entry(new Date(2022, 12, 7), 'Test'),

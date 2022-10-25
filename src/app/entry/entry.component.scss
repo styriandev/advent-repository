@@ -16,9 +16,12 @@
 
   &.video {
     display: flex;
-    align-items: center;
     flex-direction: column;
     justify-content: center;
+  }
+
+  &.text-content {
+    margin-top: 10px;
   }
 
   .display-video {
@@ -27,9 +30,17 @@
   }
 }
 
-
+.longer-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0 10px 0 10px;
+}
 
 .text {
+  font-weight: 600;
   padding-left: 10px;
   padding-top: 5px;
   height: 30px;

@@ -32,9 +32,13 @@ export class AdventCalendarComponent implements OnInit, OnDestroy {
   openDialog(entry: Entry): void {
     if (entry.isOpened || new CanBeOpenedPipe().transform(entry)) {
       this.entryService.currentSelectedItem = entry;
+      let width = '600px';
+      if (window.innerWidth < 650) {
+        width = window.innerWidth - 20 + 'px';
+      }
       const dialogRef = this.dialog.open(AdventEntryDialogComponent, {
         height: '400px',
-        width: '600px'
+        width: width
       });
       dialogRef.closed.pipe(
         first(),

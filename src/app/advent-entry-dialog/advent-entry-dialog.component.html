@@ -1,9 +1,12 @@
 <div class="dialog-content" *ngIf="entry">
   <h2 mat-dialog-title>{{entry?.text}}</h2>
 
-  <img class="display-image" *ngIf="entry && entry.imageUrl" [src]="'assets/' + entry.imageUrl" />
+  <img class="display-image" [class.bigger-screen]="videoPlayerWidth !== 450" *ngIf="entry && entry.imageUrl" [src]="'assets/' + entry.imageUrl" />
   <div *ngIf="entry.videoUrl" class="video">
-    <app-video-player [videoUrl]="entry.videoUrl" [videoHeight]="300" [videoWidth]="400"></app-video-player>
+    <app-video-player [videoUrl]="entry.videoUrl" [videoHeight]="300" [videoWidth]="videoPlayerWidth"></app-video-player>
+  </div>
+  <div *ngIf="entry.longerText" class="longer-text">
+    {{ entry.longerText }}
   </div>
   <mat-dialog-actions>
 <!--    <button mat-button mat-dialog-close>Cancel</button>-->

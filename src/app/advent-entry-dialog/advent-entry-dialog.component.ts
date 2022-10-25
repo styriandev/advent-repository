@@ -9,6 +9,8 @@ import {EntryService} from '../advent-calendar/entry.service';
 })
 export class AdventEntryDialogComponent implements OnInit {
   entry: Entry | undefined;
+  videoPlayerWidth = 400;
+
   constructor( private entryService: EntryService ) {
     if (this.entryService.currentSelectedItem) {
       this.entry = this.entryService.currentSelectedItem;
@@ -16,6 +18,9 @@ export class AdventEntryDialogComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    if (window.innerWidth < 650) {
+      this.videoPlayerWidth = window.innerWidth - 50;
+    }
   }
 
 }
