@@ -15,7 +15,8 @@
      width: 100%;
 
      &.bigger-screen {
-      width: 400px;
+       width: auto;
+       height: 300px;
      }
      border-radius: 8px 8px 0 0;
 }
