@@ -8,9 +8,13 @@
   //display: flex;
   height: 100%;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   .display-image {
-    width: 200px;
+    height: 100px;
     border-radius: 8px 8px 0 0;
   }
 
