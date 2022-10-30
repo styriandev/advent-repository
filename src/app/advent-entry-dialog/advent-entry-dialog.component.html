@@ -5,7 +5,7 @@
   <div *ngIf="entry.videoUrl" class="video">
     <app-video-player [videoUrl]="entry.videoUrl" [videoHeight]="300" [videoWidth]="videoPlayerWidth"></app-video-player>
   </div>
-  <div *ngIf="entry.longerText" class="longer-text" [innerHTML]="entry.longerText">
+  <div *ngIf="entry.longerText" class="longer-text" [innerHTML]="entry.longerText | sanitize">
   </div>
   <mat-dialog-actions>
 <!--    <button mat-button mat-dialog-close>Cancel</button>-->

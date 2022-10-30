@@ -6,6 +6,7 @@ import {AdventEntryDialogComponent} from '../advent-entry-dialog/advent-entry-di
 import {CanBeOpenedPipe} from './can-be-opened.pipe';
 import {Subject} from 'rxjs';
 import {first, takeUntil} from 'rxjs/operators';
+import {DomSanitizer} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-advent-calendar',
@@ -22,6 +23,7 @@ export class AdventCalendarComponent implements OnInit, OnDestroy {
     this.entries[0].isOpened = true;
   }
 
+
   ngOnInit(): void {
   }
 
@@ -37,7 +39,7 @@ export class AdventCalendarComponent implements OnInit, OnDestroy {
         width = window.innerWidth - 20 + 'px';
       }
       const dialogRef = this.dialog.open(AdventEntryDialogComponent, {
-        height: '400px',
+        height: '500px',
         width: width
       });
       dialogRef.closed.pipe(

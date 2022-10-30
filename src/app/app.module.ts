@@ -12,6 +12,7 @@ import {CanBeOpenedPipe} from './advent-calendar/can-be-opened.pipe';
 import {YouTubePlayerModule} from '@angular/youtube-player';
 import { VideoPlayerComponent } from './video-player/video-player.component';
 import {VideoIdPipe} from './video-player/video-id.pipe';
+import {SanitizerPipe} from './advent-entry-dialog/sanitizer.pipe';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import {VideoIdPipe} from './video-player/video-id.pipe';
     AdventEntryDialogComponent,
     CanBeOpenedPipe,
     VideoPlayerComponent,
+    SanitizerPipe,
     VideoIdPipe
   ],
   imports: [
